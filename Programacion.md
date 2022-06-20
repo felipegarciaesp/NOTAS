@@ -1,4 +1,4 @@
-#Programación
+# Programación
 En este archivo iré dejando notas respecto a la programación, por cursos que vaya tomando.
 
 ##Platzi
