@@ -88,7 +88,9 @@ git rebase master
 
 ### Curso de Introducción a la Programación
 
-#### Tipos de lenguajes de programación
+#### 1. Programación, Variables y Constantes.
+
+##### Tipos de lenguajes de programación
 
 > Es posible hablar de 2 grandes tipos de lenguajes de programación, más un tercero mas secundario:
 
@@ -120,13 +122,13 @@ git rebase master
 
 - La app móvil difiera de las otras por la lógica. Tenemos una unica ventana a la vez, las otras estan diseñadas para mostrar la maxima cantidad de informacion posible (debido a la pantalla). Estas igual estan diseñadas considerando un front-end y back-end.
 
-#### Aplicaciones cliente-servidor
+##### Aplicaciones cliente-servidor
 
 - Las aplicaciones cliente-servidor son todas aquellas aplicaciones que te muestran información que descargan u obtienen a través de un servidor que tiene toda esa información. Por ejemplo, Twitter al mostrar su universo de tweets.
 
 - Cuando hacemos una aplicación cliente-servidor se ocupa el protocolo HTTP para acceder a las APIs.
 
-#### Memoria y variables
+##### Memoria y variables
 
 - La memoria es donde nuestro ordenador contiene cierta información que, si no lo colocamos, no podemos trabajar con él.
 
@@ -149,8 +151,10 @@ otro = adios
 
 - Una variable es uan asignación de valor que va a poder cambiar mientras se ejecuta el programa.
 
-#### Instalación Java e Intellij
+##### Instalación Java e Intellij
 
 - En PATH debemos agregar `%JAVA_HOME%\bin`, que lo que hace es apuntar a la variable JAVA_HOME. `\bin` es para que sea capaz de encontrar Java desde la Terminal.
 
 - Intellij es el entorno de desarrollo integrado de Java. Nos proporciona una herramienta con la cual programar aplicaciones Java.
+
+#### 2. Tipos de datos: primitivos y complejos.
