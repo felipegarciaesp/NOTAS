@@ -87,7 +87,7 @@ git rebase master
 
 - El stashed nos permite cambiar de ramas, hacer cambios, trabajar en otras cosas y, más adelante, retomar el trabajo con los archivos que teníamos en Staging, pero que podemos recuperar, ya que los guardamos en el Stash.
 
-> git stash
+###### git stash
 
 - El comando git stash guarda el trabajo actual del Staging en una lista diseñada para ser temporal llamada Stash, para que pueda ser recuperado en el futuro.
 
@@ -103,7 +103,7 @@ git stash
 git stash save "mensaje identificador del elemento del stashed"
 ```
 
-> Obtener elelmentos del stash
+###### Obtener elementos del stash
 
 - El **stashed** se comporta como una Stack de datos comportándose de manera tipo **LIFO** (del inglés Last In, First Out, último en entrar, primero en salir), así podemos acceder al método **pop**.
 
@@ -129,6 +129,58 @@ git stash apply stash@{<num_stash>}
 
 - Donde el <num_stash> lo obtienes desden el git stash list
 
+###### Listado de elementos en el stash
+
+- Para ver la lista de cambios guardados en Stash y así poder recuperarlos o hacer algo con ellos podemos utilizar el comando:
+
+```
+git stash list
+```
+
+- Retomar los cambios de una posición específica del Stash || Aplica los cambios de un stash específico
+
+###### Crear una rama con el stash
+
+- Para crear una rama y aplicar el stash más reciente podemos utilizar el comando:
+
+```
+git stash branch <nombre_de_la_rama>
+```
+
+- Si deseas crear una rama y aplicar un stash específico (obtenido desde git stash list) puedes utilizar el comando:
+
+```
+git stash branch nombre_de_rama stash@{<num_stash>}
+```
+
+- Al utilizar estos comandos **crearás una rama** con el nombre **<nombre_de_la_rama>**, te pasarás a ella y tendrás el **stash especificado** en tu **staging area**.
+
+###### Eliminar elementos del stash
+
+- Para eliminar los cambios más recientes dentro del stash (el elemento 0), podemos utilizar el comando:
+
+```
+git stash drop
+```
+
+- Pero si, en cambio, conoces el índice del stash que quieres borrar (mediante git stash list) puedes utilizar el comando:
+
+```
+git stash drop stash@{<num_stash>}
+```
+
+- Donde el <num_stash> es el índice del cambio guardado.
+
+- Si, en cambio, deseas eliminar todos los elementos del stash, puedes utilizar:
+
+```
+git stash clear
+```
+
+- Consideraciones:
+    1. El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que estaban antes aumentan su valor.
+    2. Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u (que guardará en el stash los archivos que no estén en el staging).
+    3. Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
 
 
 
