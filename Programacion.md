@@ -97,6 +97,14 @@ git rebase master
 
 - Tambien es útil cuando estoy haciendo modificaciones en la rama main y quiero ir a otra rama, pero aun no quiero hacer commit a mi rama main. En este escenario, es útil hacer `git stash`. 
 
+- Con `git stash` guardo los cambios del archivo en un lugar temporal mientras me muevo a otra rama. Con `git stash list` puedo ver este lugar temporal.
+
+- Con `git stash pop` puedo volver al archivo que dejé guardado en **stash**. Es importante que este comando lo haga en la rama donde hice el **stash**. Lo interesante acá es que estando en el archivo puedo hacer `Ctrl + Z` y volver a lo que había escrito antes.
+
+- Con `git stash branch [nombre rama]` puedo hacer una rama del stash. 
+
+- Con `git stash drop` borro completamente un stash.
+
 - El **stashed** nos sirve para guardar cambios para después, Es una lista de estados que nos guarda algunos cambios que hicimos en Staging para poder cambiar de rama sin perder el trabajo que todavía no guardamos en un commit
 
 - Esto es especialmente útil porque hay veces que no se permite cambiar de rama, ésto porque tenemos cambios sin guardar, no siempre es un cambio lo suficientemente bueno como para hacer un commit, pero no queremos perder ese código en el que estuvimos trabajando.
