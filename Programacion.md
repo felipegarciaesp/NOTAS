@@ -39,7 +39,7 @@ El index es un indicador dentro de la base de datos de git de donde estan los ca
 
 ### Curso de Introducción a la Programación
 
-> Es posible hablar de 2 grandes tipos, más un tercero mas secundario:
+> Es posible hablar de 2 grandes tipos de lenguajes de programación, más un tercero mas secundario:
 
 - 1er tipo: Lenguaje compilado. Son aquellos que a partir de nuestro codigo, se genera un programa que el procesador es capaz de ejecutar directamente desde el Sistema Operativo. El procesador es capaz de ejecutarlo sin ayuda intermedia. Ejemplos: C, Go. Desventajas: Para cada programa que tengo, se debe adaptar a la estructura del procesador que tengo.
 
