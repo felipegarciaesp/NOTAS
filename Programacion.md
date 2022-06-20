@@ -33,11 +33,11 @@ El index es un indicador dentro de la base de datos de git de donde estan los ca
 +++ b/felipe.txt : esto indica que hay una version a y b.
 @@ -1,5 +1,6 @@ : esto indica cuantos bytes cambiaron los archivos
 
-
-
 ## OpenBootcamp
 
 ### Curso de Introducción a la Programación
+
+#### Tipos de lenguajes de programación
 
 > Es posible hablar de 2 grandes tipos de lenguajes de programación, más un tercero mas secundario:
 
@@ -68,3 +68,10 @@ El index es un indicador dentro de la base de datos de git de donde estan los ca
 - La app de escritorio es mas de lo mismo que la app Web, hay una parte que vemos y otra que no vemos. Cambia como está programada, cambian las tecnologías subyacentes, pero es básicamente lo mismo. En Windows estas app están desarrolladas en .NET, en Mac y otros sistemas cambia.
 
 - La app móvil difiera de las otras por la lógica. Tenemos una unica ventana a la vez, las otras estan diseñadas para mostrar la maxima cantidad de informacion posible (debido a la pantalla). Estas igual estan diseñadas considerando un front-end y back-end.
+
+#### Aplicaciones cliente-servidor
+
+- Las aplicaciones cliente-servidor son todas aquellas aplicaciones que te muestran información que descargan u obtienen a través de un servidor que tiene toda esa información. Por ejemplo, Twitter al mostrar su universo de tweets.
+
+- Cuando hacemos una aplicación cliente-servidor se ocupa el protocolo HTTP para acceder a las APIs.
+
