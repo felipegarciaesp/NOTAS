@@ -46,7 +46,7 @@ El index es un indicador dentro de la base de datos de git de donde estan los ca
 - Rebase es el proceso de mover o combinar una secuencia de confirmaciones en una nueva confirmación base. La reorganización es muy útil y se visualiza fácilmente en el contexto de un flujo de trabajo de ramas de funciones. El proceso general se puede visualizar de la siguiente manera.
 
 
-<p><a href="https://imgur.com/tiUn7Kh"><img src = "https://i.imgur.com/tiUn7Kh.jpg" width="100%" title="descripcion de la imagen"/></a></p>
+<p><a href="https://imgur.com/tiUn7Kh"><img src = "https://i.imgur.com/tiUn7Kh.jpg" width="50%" title="descripcion de la imagen"/></a></p>
 
 
 - Para hacer un rebase en la rama feature de la rama master, correrías los siguientes comandos:
@@ -58,7 +58,7 @@ git rebase master
 
 Esto trasplanta la rama feature desde su locación actual hacia la punta de la rama master:
 
-<p><a href="https://imgur.com/F7xTWpC"><img src = "https://i.imgur.com/F7xTWpC.jpg" width="100%" title="descripcion de la imagen"/></a></p>
+<p><a href="https://imgur.com/F7xTWpC"><img src = "https://i.imgur.com/F7xTWpC.jpg" width="50%" title="descripcion de la imagen"/></a></p>
 
 Ahora, falta fusionar la rama feature con la rama master
 
