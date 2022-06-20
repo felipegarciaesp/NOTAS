@@ -26,12 +26,12 @@ En este archivo iré dejando notas respecto a la programación, por cursos que v
 ls -la
 git config --global
 ```
-HEAD -> master : estoy en la version mas reciente.
-diff: agarra la version anterior con la nueva y me muestra la diferencia.
-El index es un indicador dentro de la base de datos de git de donde estan los cambios.
---- a/felipe.txt
-+++ b/felipe.txt : esto indica que hay una version a y b.
-@@ -1,5 +1,6 @@ : esto indica cuantos bytes cambiaron los archivos
+> HEAD -> master : estoy en la version mas reciente.
+> diff: agarra la version anterior con la nueva y me muestra la diferencia.
+> El index es un indicador dentro de la base de datos de git de donde estan los cambios.
+> --- a/felipe.txt
+> +++ b/felipe.txt : esto indica que hay una version a y b.
+> @@ -1,5 +1,6 @@ : esto indica cuantos bytes cambiaron los archivos
 
 
 
