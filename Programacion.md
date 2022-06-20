@@ -79,6 +79,11 @@ git checkout experiment
 git rebase master
 ```
 
+##### 24. Git Stash: Guardar cambios en memoria y recuperarlos después
+
+
+
+
 ## OpenBootcamp
 
 ### Curso de Introducción a la Programación
