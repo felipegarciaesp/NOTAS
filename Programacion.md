@@ -158,3 +158,14 @@ otro = adios
 - Intellij es el entorno de desarrollo integrado de Java. Nos proporciona una herramienta con la cual programar aplicaciones Java.
 
 #### 2. Tipos de datos: primitivos y complejos.
+
+##### Introducción a los tipos de datos primitivos
+
+- Un tipo de dato primitivo es un tipo de dato básico en casi cualquier lenguaje de programación.
+
+- Un caracter es un tipo de dato primitivo y este puede ser una letra ('a'), un número ('9') y/o un símbolo ('~'). En las tablas ASCII se puede ver que numero se almacena en la memoria para poder representar cierto caracter.
+
+- Un texto es un conjunto de caracteres. Se le conoce como ***string***. Es importante tener en cuenta que en la memoria se almacena cada caracter por separado pero consecutivo.
+
+- 1 caracter ocupa 8 bits de memoria = 1 bytes.
+- 4 caracteres ocupan 8*4 = 32 bits = 4 bytes.
