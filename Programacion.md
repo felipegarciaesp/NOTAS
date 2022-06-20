@@ -21,7 +21,7 @@ En este archivo iré dejando notas respecto a la programación, por cursos que v
 14. Si intento hacer un commit sin comentarios, el bash me va a tirar a un entorno VIM. Salgo de aca agregando un comentario y luego apretando `ESC + SHIFT + Z + Z`. Con esto fuerzo el envio del commit porque guardo el archivo. Esta es la forma de guardar en VIM.
 **Aprender mas de terminal linea de comandos para saber más de VIM.**
 
->Un guion indica que ocuparé un comando, doble guión indica que ocuparé una palabra: Ejemplos:
+> Un guion indica que ocuparé un comando, doble guión indica que ocuparé una palabra: Ejemplos:
 ```
 ls -la
 git config --global
