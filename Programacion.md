@@ -206,6 +206,31 @@ git stash clear
     2. Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u (que guardará en el stash los archivos que no estén en el staging).
     3. Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
 
+##### 25. Git Clean: limpiar tu proyecto de archivos no deseados.
+
+- Con `git clean` podemos borrar todos esos archivos genereados or error (o quizás no por error) que no queremos que estén en nuestro repositorio. Sin embargo, antes es necesario utilizar `git clean --dry-run` para simular lo que se va a borrar, sin borrarlo.
+
+- Con `git clean -f` se borran todos los archivos indicados en `git clean --dry-run`.
+
+- Ojo que si se tienen carpetas duplicadas, esas deben borrarse a mano, no se borrarán con el comando descrito. Tampoco va a borrar aquellos archivos que le hemos dicho a git que deben ser ignorados (en el archivo .gitignore). **`git clean` solo va a borrar las cosas que puede indexar.**
+
+- Mientras estamos trabajando en un repositorio podemos añadir archivos a él, que realmente no forma parte de nuestro directorio de trabajo, archivos que no se deberían de agregar al repositorio remoto.
+
+- El comando `clean` actúa en archivos sin seguimiento, este tipo de archivos son aquellos que se encuentran en el directorio de trabajo, pero que aún no se han añadido al índice de seguimiento de repositorio con el comando `add`.
+
+- La ejecución del comando predeterminado puede producir un error. La configuración global de Git obliga a usar la opción `force` con el comando para que sea efectivo. Se trata de un importante mecanismo de seguridad ya que este comando no se puede deshacer.
+
+- En resumen:
+
+> `git clean --dry-run` comando que revisa los archivos que no tienen seguimiento.
+
+>`git clean -f` comando que elimina los archivos listados de no seguimiento.
+
+
+
+
+
+
 
 
 ## OpenBootcamp
