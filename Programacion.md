@@ -75,3 +75,31 @@ El index es un indicador dentro de la base de datos de git de donde estan los ca
 
 - Cuando hacemos una aplicación cliente-servidor se ocupa el protocolo HTTP para acceder a las APIs.
 
+#### Memoria y variables
+
+- La memoria es donde nuestro ordenador contiene cierta información que, si no lo colocamos, no podemos trabajar con él.
+
+- Cuando compilamos, el procesador debe ser capaz de leer la información desde la memoria.
+
+- Variable: es un nombre humano para una posición de memoria. Fue creado para que no tenga que recordar en que espacio de memoria se ha quedado alguna variable definida. Basta con que me acuerde del nombre de la variable.
+
+```
+numero = 1234
+decimal = 2.2
+saluda = "benvingut"
+otro = adios
+```
+
+- Podemos identificar dos tipos de variables:
+    - Cambiantes: que pueden cambiar su valor en cualquier momento. Se les llama **variables**.
+    - No cambiantes: no pueden cambiar su valor una vez que se les ha asignado uno. Se les llama **constantes**.
+
+- Una constante es una asignación de variable que no voy a poder cambiar durante la ejecución del programa.
+
+- Una variable es uan asignación de valor que va a poder cambiar mientras se ejecuta el programa.
+
+#### Instalación Java e Intellij
+
+- En PATH debemos agregar `%JAVA_HOME%\bin`, que lo que hace es apuntar a la variable JAVA_HOME. `\bin` es para que sea capaz de encontrar Java desde la Terminal.
+
+- Intellij es el entorno de desarrollo integrado de Java. Nos proporciona una herramienta con la cual programar aplicaciones Java.
