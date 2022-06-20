@@ -26,13 +26,45 @@ En este archivo iré dejando notas respecto a la programación, por cursos que v
 ls -la
 git config --global
 ```
-> HEAD -> master : estoy en la version mas reciente.
-> diff: agarra la version anterior con la nueva y me muestra la diferencia.
-> El index es un indicador dentro de la base de datos de git de donde estan los cambios.
-> --- a/felipe.txt
-> +++ b/felipe.txt : esto indica que hay una version a y b.
-> @@ -1,5 +1,6 @@ : esto indica cuantos bytes cambiaron los archivos
+HEAD -> master : estoy en la version mas reciente.
+diff: agarra la version anterior con la nueva y me muestra la diferencia.
+El index es un indicador dentro de la base de datos de git de donde estan los cambios.
+--- a/felipe.txt
++++ b/felipe.txt : esto indica que hay una version a y b.
+@@ -1,5 +1,6 @@ : esto indica cuantos bytes cambiaron los archivos
 
 
 
+## OpenBootcamp
 
+### Curso de Introducción a la Programación
+
+> Es posible hablar de 2 grandes tipos, más un tercero mas secundario:
+
+- 1er tipo: Lenguaje compilado. Son aquellos que a partir de nuestro codigo, se genera un programa que el procesador es capaz de ejecutar directamente desde el Sistema Operativo. El procesador es capaz de ejecutarlo sin ayuda intermedia. Ejemplos: C, Go. Desventajas: Para cada programa que tengo, se debe adaptar a la estructura del procesador que tengo.
+
+- 2do tipo: Lenguaje interpretado. Parte de un codigo fuente pero no se compila a algo que entiende el procesador, sino que algo intermedio. Es un bite-code que no entiende el procesador. Para ejecutarlo necesito un interprete, que es un programa que lee el codigo y ejecuta el programa paso a paso, pero no sobre mi procesador sino que sobre el mismo. Estos son mas lentos que el otro tipo. Ejemplos: Java (se ejecuta en JVM), Python, Pearl, PHP. Ventajas: funcionan en cualquier parte.
+
+- 3er tipo: Híbrido. Tiene lo bueno de los dos: interpreta en cualquier plataforma y es capaz de compilar en ese procesador.
+
+> Los lenguajes pueden ser de otro dos tipos (entre compilado e interpretado), pueden ser tipados y no tipados.
+
+- Tipados: en donde puedo almacenar datos, pero le debo decir al programa que dato es: si es un numero, un texto, mensaje, valor numérico.
+
+- No tipados: aquellos en que mi compilador interprete es capaz de deducir que tipo de dato es.
+
+- Esto de tipado o no tipado lo deciden los programadores del lenguaje. Si un lenguaje es tipado, no hay forma de que yo lo haga no tipado.
+
+> Tipos de aplicaciones:
+
+- Web, de escritorio, aplicaciones móviles.
+
+- Web: capa de chapa y pintura: front-end, es lo que se ve. Cuenta con un codigo HTML (codigo fuente). Tienen codigo JavaScript, da funcionalidad. Tiene tambien CSS, que son los estilos. Los 3 trabajan altamente cohesionados. HTML define la estructura, CSS la pone bonita y JS nos permite interactuar de forma dinámica.
+
+- El back-end de una aplicación Web es el sistema remoto que contiene la información.
+
+- Las app Web se dividen en front-end y back-end. El primero es lo que se ve en la pagina, el segundo es el que contiene la información remota que luego vemos.
+
+- La app de escritorio es mas de lo mismo que la app Web, hay una parte que vemos y otra que no vemos. Cambia como está programada, cambian las tecnologías subyacentes, pero es básicamente lo mismo. En Windows estas app están desarrolladas en .NET, en Mac y otros sistemas cambia.
+
+- La app móvil difiera de las otras por la lógica. Tenemos una unica ventana a la vez, las otras estan diseñadas para mostrar la maxima cantidad de informacion posible (debido a la pantalla). Estas igual estan diseñadas considerando un front-end y back-end.
