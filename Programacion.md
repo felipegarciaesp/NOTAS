@@ -37,6 +37,10 @@ El index es un indicador dentro de la base de datos de git de donde estan los ca
 
 ##### 23. Git Rebase: reorganizando el trabajo realizado
 
+- Básicamente, `git rebase` se utiliza cuando hago cambios en otras ramas, pero que luego no quiero dejar registro alguno que estas ramas existieron.
+
+- Recordar que primero se hace `git rebase` a las ramas que quiero obviar y luego se hace `git rebase` a la rama principal, donde quiero que se muestren los commits hechos en estas otras ramas. No hacerlo en este orden va a terminar en un conflicto que solo podrá ser resuelto por `git reset`.
+
 - Rebase: agarrar una rama entera y pegarla de regreso a la rama main. Es una muy mala practica si se envia a repositorios remotos, esto debe hacerse para repositorios locales. Rebase reescibe la hisotria del repositorio, es como si nunca hubiese existido. Cuidado al hacer rebase. 
 
 - Recordar que primero se hace rebase a la rama que cambia y luego rebase a la rama final.
@@ -80,6 +84,18 @@ git rebase master
 ```
 
 ##### 24. Git Stash: Guardar cambios en memoria y recuperarlos después
+
+- WIP siginifica Work In Progress.
+
+- El Stash es util cuando he modificado por error algo en mi archivo y quiero volver a una version anterior.
+
+- El stash es, básicamente, una forma útil de tener en temporal los cambios, poder moverte entre ramas y luego poder recuperar los archivos.
+
+- `git stash` es tipico cuando se hacen pequeños experimentos que no requieren de una nueva rama o un rebase. Sino que simplemente estoy probando algo y despues quiero volver a mi version correcta, la del último commit. 
+
+- Otro ejemplo cuando es necesario el `git stash`es cuando llevo mucho trabajo adelantado y se me olvidó hacer commit y necesito datos de otra rama. Puedo hacer `git stash` y luego un `git checkout` para irme a la otra rama.
+
+- Tambien es útil cuando estoy haciendo modificaciones en la rama main y quiero ir a otra rama, pero aun no quiero hacer commit a mi rama main. En este escenario, es útil hacer `git stash`. 
 
 - El **stashed** nos sirve para guardar cambios para después, Es una lista de estados que nos guarda algunos cambios que hicimos en Staging para poder cambiar de rama sin perder el trabajo que todavía no guardamos en un commit
 
