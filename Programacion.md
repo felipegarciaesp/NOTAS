@@ -1,10 +1,10 @@
 # Programación
 En este archivo iré dejando notas respecto a la programación, por cursos que vaya tomando.
 
-##Platzi
-###Curso profesional de Git y GitHub
+## Platzi
+### Curso profesional de Git y GitHub
 
-####Pasos de git:
+#### Pasos de git:
 1. Crear una carpeta.
 2. Tipear comando `git init` para crear el repositorio.
 3. Crear un archivo con un editor de texto, podría ser Visual Studio Code. Para abrir VSC, se puede tipear `code` en el bash.
