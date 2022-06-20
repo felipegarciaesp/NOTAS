@@ -226,12 +226,31 @@ git stash clear
 
 >`git clean -f` comando que elimina los archivos listados de no seguimiento.
 
+##### 26. Git cherry-pick: traer commits viejos al head de un branch
 
+- Con `git cherry-pick` puedo traer a la versión mas reciente de main una versión en particular hecha en otra rama.
 
+- Funcionaría así: `git cherry-pick [ID del commit]`. Nisiquera debo hacer un commit adicional luego de hacerlo.
 
+- El commit queda registrado como si hubiese sido hecho en main, cuando en realidad fue hecho en otra rama.
 
+- ***Importante: cherry-pick es una mala práctica. Usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo, mejor evita emplear este comando.***
 
+- `git Cherry-pick` es un comando que permite tomar uno o varios commits de otra rama sin tener que hacer un merge completo. Así, gracias a **cherry-pick**, podríamos aplicar los commits relacionados con nuestra funcionalidad en la rama master sin necesidad de hacer un merge.
 
+- Para demostrar cómo utilizar git cherry-pick, supongamos que tenemos un repositorio con el siguiente estado de rama:
+
+> a -b - c - d   Master
+>         \
+>           e - f - g Feature
+
+- Estando en la rama Master y tipear `git cherry-pick f`, tendremos los siguiente:
+
+>a -b - c - d - f   Master
+>         \
+>           e - f - g Feature
+
+- Y listo, el commit "f" se agrega a nuestra rama Master.
 
 ## OpenBootcamp
 
