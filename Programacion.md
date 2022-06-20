@@ -167,5 +167,7 @@ otro = adios
 
 - Un texto es un conjunto de caracteres. Se le conoce como ***string***. Es importante tener en cuenta que en la memoria se almacena cada caracter por separado pero consecutivo.
 
-- 1 caracter ocupa 8 bits de memoria = 1 bytes.
-- 4 caracteres ocupan 8*4 = 32 bits = 4 bytes.
+> 1 caracter ocupa 8 bits de memoria = 1 bytes.
+> 4 caracteres ocupan 8*4 = 32 bits = 4 bytes.
+
+- Otro tipo de dato primitivo son los numeros enteros.
