@@ -171,3 +171,5 @@ otro = adios
 > 4 caracteres ocupan 8*4 = 32 bits = 4 bytes.
 
 - Otro tipo de dato primitivo son los numeros enteros.
+
+##### Tipos de datos primitivos - Datos Numéricos
