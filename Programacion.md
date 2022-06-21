@@ -243,9 +243,9 @@ class Caja {
 
 - Los métodos son algo que pueden alterar las propiedades del objeto.
 
-```
-El señor cara de papa, por ejemplo, sería un objeto, ya que intenta representar una papa (que sería la realidad). Las propiedades del señor cara de papa serían color marrón, sombrero, nariz, ojos, etc. El método sería "quitar sombrero", "quitar oreja","poner brazo", etc.
-```
+
+>El señor cara de papa, por ejemplo, sería un objeto, ya que intenta representar una papa (que sería la realidad). Las propiedades del señor cara de papa serían color marrón, sombrero, nariz, ojos, etc. El método sería "quitar sombrero", "quitar oreja","poner brazo", etc.
+
 
 ```
 Juguete:
