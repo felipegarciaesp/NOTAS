@@ -173,3 +173,102 @@ otro = adios
 - Otro tipo de dato primitivo son los numeros enteros.
 
 ##### Tipos de datos primitivos - Datos Numéricos
+
+- Pueden ser enteros o de coma flotante. Esto ultimo significa que es decimal.
+
+- Los numeros enteros son de 32 bits o de 64 bits.
+
+##### Tipos de datos primitivos - Boolean
+
+- Representan valores Verdadero o Falso. True o False.
+
+##### Tipos de datos complejos - Arrays
+
+- Los tipos de datos complejos se forman a partir de tipos de datos básicos.
+
+- Un array es un conjunto de **un mismo tipo** de datos primitivos.
+
+- A un array de array se le llama "array bidimensional".
+
+```
+arraysChar = ['a','b','c','d']
+arrayString = ["hola","adios"]
+arrayNumeros = [0,1,2,3,4,5,6]
+arrayNumeroF = [1.1,4.4,3.14]
+
+arrayInvalido = ['a', 'texto', 9, 3.1]
+
+arrayArrays = [
+    [1,2,3]
+    [4,5,6]
+]
+```
+
+##### Tipos de datos complejos - Tuplas
+
+- Suele ser similar a un array, pero con una diferencia. Los elementos del array son variables (mutables), mientras que los de la tupla con invariables (inmutables). La tupla es una especia de **array invariable** (aunque esta definición puede cambiar dependiendo del lenguajes de programación).
+
+- Definición adicional: mapa asociativo = array asociativo = mapa. Esto corresponde a lo siguiente:
+
+```
+arrayCapitalesPais[
+    "Ucrania" => "Kiev",
+    "España" => "Madrid"
+]
+```
+
+- Los mapas vendrían a ser casi lo mismo que un diccionario (como se le conoce en Python). Son elementos que cuentan con una clave y un valor.
+
+##### Tipos de datos complejos - Objetos
+
+- Un objeto es algo que la lógica de nuestro programa intenta representar el mundo real. Ejemplo: Caja.
+
+- Los objetos pueden tener propiedades. Ejemplo: Caja cuadrada, caja rectangular.
+
+```
+Caja:
+    Propiedades:
+        - Color: blanco.
+        - Forma: rectangular
+
+En Java sería así:
+class Caja {
+    String Color = "blanco";
+    String Forma = "rectangular";
+    int Largo = 20;
+}
+```
+
+- Los objetos tienen propiedades y métodos.
+
+- Los métodos son algo que pueden alterar las propiedades del objeto.
+
+```
+El señor cara de papa, por ejemplo, sería un objeto, ya que intenta representar una papa (que sería la realidad). Las propiedades del señor cara de papa serían color marrón, sombrero, nariz, ojos, etc. El método sería "quitar sombrero", "quitar oreja","poner brazo", etc.
+```
+
+```
+Juguete:
+    Propiedades:
+        - Color: marrón
+        - Forma: patata
+    Métodos:
+        - Poner sombrero.
+        - Quitar brazo.
+
+class Juguete{
+    String Color = "marron";
+    String Forma = "patata";
+
+    ponerSombrero(){}
+    quitarBrazo(){}
+}
+```
+
+##### Consejos y curiosidades sobre los tipos de datos
+
+- Una cadena de texto es una secuencia de caracteres. Los computadores saben donde empieza la secuencia de caracteres pero no donde terminan. Implicitamente los lenguajes de programacion añaden un 0 al final de la cadena de texto creada.
+
+- Por ejemplo, si escribo "Victor", el lenguaje en realidad guardará "Victor"+0. El valor 0 indica fin de cadena, no hace falta crearlo. En definitiva, en la memoria se almacenará: Victor0, con cada caracter en cada espacio. El 0 es algo que va a poner el computador.
+
+- Las cadenas de texto son una conveniencia. Por debajo son escritos así: `arrayCaracteres = ['V','i','c','t','o','r',0]`, pero es mucho mas conveniente no hacer esto, tanto para el PC como para los humanos.
