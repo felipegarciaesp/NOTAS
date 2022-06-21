@@ -252,6 +252,26 @@ git stash clear
 
 - Y listo, el commit "f" se agrega a nuestra rama Master.
 
+##### 27. Git Reset y Reflog: úsese en caso de emergencia
+
+- Hay un comando que no olvida nada: `git reflog`. Esto es útil cuando se cometen errores graves, como borrar archivos, borrar ramas y hacer commits que no corresponden. De todas formas, **es igualmente una mala práctica**.
+
+- Con `git reflog` se ve todo. Este es un comando que siempre tiene la verdad. Acá se van a ver incluso aquellos commits que no se ven en `git log` debido a algún `git reset` realizado anteriormente.
+
+- `git reflog` funciona así: 
+    1. Tipear `git reflog` en la consola y ver el último HEAD en el que funcionaba todo.
+    2. Tipear `git reset HEAD@{4}`. El reset escrito corresponde a uno "soft" y el "HEAD@{4}" es solo un ejemplo, puede tener fácilmente cualquier número en tu proyecto actual.
+
+- Recordar que hay dos tipos de reset:
+    -`git reset --soft` mantiene lo que tengas en staging, esto es, todo lo que le has hecho `git add` pero que todavía este pendiente un `git commit`.
+    -`git reset --hard` resetea todo.
+    -`git reset --hard [ID]` perderá todo lo que se encuentra en staging y en el Working directory y se moverá el head al commit [ID].
+    -`git reset --soft [ID]` recuperará todos los cambios que tengas diferentes al commit [ID], los agregará al staging area y moverá el head al commit [ID].
+
+- El [ID] que he puesto en los mensajes anteriores también es conocido como "el hash del Head".
+
+##### 28. Reconstruir commits en Git con amend
+
 ## OpenBootcamp
 
 ### Curso de Introducción a la Programación
