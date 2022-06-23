@@ -272,6 +272,21 @@ git stash clear
 
 ##### 28. Reconstruir commits en Git con amend
 
+- Para esas ocasiones en las que has hecho un commit, pero en realidad te faltó hacer algo. Ejemplo: he hecho un commit que dice: "Cambio al tagline y color del footer", cuando en realidad no cambié el footer.
+
+- Al momento de hacer el cambio del footer, es importante hacer un `git add [archivo.extension]`. Luego, tipeo el comando `git commit --amend`. Esto lo que va a hacer es que va a pegar al commit anterior los cambios que acabo de hacer. Se va a abrir VIM y te va a dar la opción de cambiar/editar el commit.
+
+- *Remendar* un commit con `amend` puede modificar el commit más reciente (enmendar) en la misma rama. Lo ejecutamos así:
+
+```
+git add -A #Para hacer uso de amend, los archivos deben estar en staging.
+git commit --amend #Remendar último commit.
+```
+
+- Este comando sirve para agregar archivos nuevos o actualizar el commit anterior y no generar commits innecesarios. También es una forma sencilla de editar o agregar comentarios al commit anterior porque abrirá la consola para editar este commit anterior.
+
+- Usar `amend` ***es una mala práctica***, sobre todo cuando ya se ha hecho `push` o `pull` al repositorio remoto. Al momento de hacer `amend` con algún commit que esté en remoto, va a generar un conflicto que se va a arreglar haciendo un `commit` adicional y se perderá el beneficio del `amend`.
+
 ## OpenBootcamp
 
 ### Curso de Introducción a la Programación
