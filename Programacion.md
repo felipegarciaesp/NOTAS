@@ -287,6 +287,25 @@ git commit --amend #Remendar último commit.
 
 - Usar `amend` ***es una mala práctica***, sobre todo cuando ya se ha hecho `push` o `pull` al repositorio remoto. Al momento de hacer `amend` con algún commit que esté en remoto, va a generar un conflicto que se va a arreglar haciendo un `commit` adicional y se perderá el beneficio del `amend`.
 
+##### 29. Buscar en archivos y commits de Git con Grep y log
+
+- A continuación, un listado de comandos:
+
+```
+git grep color        --> nos buscará en todo el proyecto los archivos en donde está la palabra color.
+git grep la           --> donde use la palabra la
+git grep -n color     -–> en que lineas usé la palabra color
+git grep -n platzi    --> en que lineas usé la palabra platzi
+git grep -c la        --> cuantas veces usé la palabra la
+git grep -c platzi    --> cuantas veces usé la palabra platzi
+git grep -c “<p>”     -–> cuantas veces usé la etiqueta <p>
+git log -S “cabecera” --> cuantas veces usé la palabra cabecera en todos los commits.
+```
+
+- En resumen, `grep` se usa para los **archivos** y `log` se usa para los **commits**.
+
+
+
 ## OpenBootcamp
 
 ### Curso de Introducción a la Programación
