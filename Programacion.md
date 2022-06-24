@@ -272,3 +272,14 @@ class Juguete{
 - Por ejemplo, si escribo "Victor", el lenguaje en realidad guardará "Victor"+0. El valor 0 indica fin de cadena, no hace falta crearlo. En definitiva, en la memoria se almacenará: Victor0, con cada caracter en cada espacio. El 0 es algo que va a poner el computador.
 
 - Las cadenas de texto son una conveniencia. Por debajo son escritos así: `arrayCaracteres = ['V','i','c','t','o','r',0]`, pero es mucho mas conveniente no hacer esto, tanto para el PC como para los humanos.
+
+#### 3. Funciones.
+
+##### Definicion y conceptos
+
+- Una función nos permite no tener que repetir codigo.
+
+- En JAVA, la variable `void` en una función indica que esta función no devolverá algún valor. Devolverá nada!
+
+##### Usos
+
