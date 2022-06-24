@@ -304,6 +304,29 @@ git log -S “cabecera” --> cuantas veces usé la palabra cabecera en todos lo
 
 - En resumen, `grep` se usa para los **archivos** y `log` se usa para los **commits**.
 
+##### 30. Comandos y recursos colaborativos en Git y GitHub
+
+- Con el comando `git config --global alias.[nombre] "comando"` voy a crear un comando (bajo un alias) que va a estar anidado en toda la instalación actual de git. Ejemplo:
+
+```
+git config --global alias.stats "shortlog -sn --all --no-merges"
+```
+
+- `git blame` se usa para ver quien modificó qué por última vez.
+
+- A continuación veremos una lista de comandos colaborativos para facilitar el trabajo remoto en GitHub:
+    
+    - `git shortlog`: muestra un log por persona de lo que ha hecho cada uno de los miembros del equipo.
+    - `git shortlog -sn`: muestra la cantidad de commits que ha hecho cada miembro del equipo.
+    - `git shortlog -sn --all`: muestra cuantos commit han hecho cada miembro del equipo, hasta los que han sido eliminados.
+    - `git shortlog -sn --all --no-merges`: muestra cuantos commit ha hecho cada miembro, quitando los merges.
+    - `git blame ARCHIVO.extension`: muestra quien hizo cada cosa línea por línea.
+    - `git blame -c ARCHIVO.extension`: hace lo mismo que blame, pero lo muestra mejor indentado.
+    - `git COMANDO --help`:muestra como funciona el comando, abre la documentación.
+    - `git blame ARCHIVO -L35,53`: muestra quien hizo cada cosa línea por línea, indicándole entre qué línea ver. En este ejemplo, se verá entre las líneas 35 y 53 (incluídas)
+    - `git branch -r`: se muestran todas las ramas remotas, las que están en tu servidor (GitHub en este caso).
+    - `git branch -a`: se muestran todas las ramas, tanto locales como remotas.
+
 
 
 ## OpenBootcamp
