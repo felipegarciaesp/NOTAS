@@ -281,5 +281,32 @@ class Juguete{
 
 - En JAVA, la variable `void` en una función indica que esta función no devolverá algún valor. Devolverá nada!
 
-##### Usos
+#### 4. Sentencias de control
 
+- Forma en la que hacemos que un programa actúe como nosotros queramos. Son una serie de reglas. Si el codigo hace algo mal, es porque nosotros nos hemos equivocado.
+
+- Condicionales: son condiciones, comparan unas cosas con otras.
+
+- Condiciones lógicas: "Y", "O".
+
+- Comparativas: "MAYOR QUE", "MENOR QUE", "MAYOR O IGUAL QUE", "MENOR O IGUAL QUE", "IGUAL A".
+
+- En esta lección se ha explicado:
+    - El `IF` en los lenguajes de programación.
+    - Los bucles, que consiste en que un fragmento de mi codigo se va a ejecutar mientras se cumpla una condición. Esto corresponde a los ciclos `WHILE` y `DO WHILE`.
+    - El `FOR`, que es otro bucle.
+    - Los interruptores (`SWITCH CASE`) que es otra forma de hacer los ciclos `IF ELSE`. Estos `SWITCH CASE` evalúa distintos casos. En Java es importante poner `break` al final de cada `case`, ya que Jjava va ejecutando cada `case` hasta que se encuentra con un `break`.
+
+> IMPORTANTE:
+
+```
+contador -=5 es equivalente a contador = contador -5.
+contador-- es equivalente a contador = contador - 1.
+```
+
+- `DO WHILE` primero ejecuta las acciones y luego evalúa la condición. Lo que hay dentro del cuerpo se va a ejectuar por lo menos una vez, luego veremos si se sigue ejecutando.
+
+-`WHILE` primero evalúa la expresión y luego ejecuta las acciones. Puede que lo que hay dentro de su cuerpo no se ejecute.
+
+
+> DATO CURIOSO: el lenguaje `Go` no tiene `while`, porque no le hace falta. 
