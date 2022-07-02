@@ -336,3 +336,9 @@ Al hacer comentarios, más que pensar en otro programador, piensa en que esa exp
 - **Sexto error**: Encontrar un error en el código utilizando el comando `print`. Lo ideal es utilizar un depurador para esto. Un depurador nos permite hacer cosas que los `print` no.
 
 - **Septimo error**: Crear funciones grandes. Las funciones no pueden ser hechas porque sí, deben tener un cometido en nuestro codigo. Sirven también para simplificar nuestro código.
+
+- **Octavo error**: Abusar de la capacidad de memoria. En un código hay que tener en cuenta que lo ejecutado ocupará memoria en un servidor, por lo que es un parámetro que debe ser tomado en cuenta al momento de programar.
+
+```
+La optimización prematura es la causa de todos los males. La micro optimización, más aún.
+```
