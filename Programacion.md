@@ -310,3 +310,29 @@ contador-- es equivalente a contador = contador - 1.
 
 
 > DATO CURIOSO: el lenguaje `Go` no tiene `while`, porque no le hace falta. 
+
+#### 5. Errores
+
+##### Gestión de errores
+
+- **Primer error**: No nombrar bien las variables. Por ejemplo, si una variable es un contador, nombrarla como tal. Esto es para facilitar la vida a un colega que vea el código. El código sin comentarios debe ser entendible fácilmente por alguien que no lleva mucho tiempo programando. Excepeción a esta regla: en los ciclos for es una buena practica identificar las variables como i, j, k, etc. Está permitido igualmente utilizar `temp` o `tmp` para una variable temporal.
+
+```
+Un error típico de un programador es asignar un mal nombre a una variable.
+```
+
+- **Segundo error**: Hacer un chorro de código sin explicar lo que se quiere hacer. Es importante comentar los códigos. De todas formas, es importante recalcar que es mala práctica comentar lo obvio. No es necesario comentar absolutamente cada línea. Es igualmente malo no comentar que comentar de más.
+
+```
+Al hacer comentarios, más que pensar en otro programador, piensa en que esa explicación puede ser útil para tí mismo. Ya sea en el presente o en el futuro.
+```
+
+- **Tercer error**: Nno mantener la coherencia en el formato del código. En las empresas hay que seguir la guía de estilo, puede ser que ya tengan un estándar.
+
+- **Cuarto error**: No hacer respaldos de mis códigos, o no ocupar un sistema de control de versiones.
+
+- **Quinto error**: Utilizar formas complejas de codificar que me permite un lenguaje cuando conozco formas mas sencillas de hacerlo.
+
+- **Sexto error**: Encontrar un error en el código utilizando el comando `print`. Lo ideal es utilizar un depurador para esto. Un depurador nos permite hacer cosas que los `print` no.
+
+- **Septimo error**: Crear funciones grandes. Las funciones no pueden ser hechas porque sí, deben tener un cometido en nuestro codigo. Sirven también para simplificar nuestro código.
