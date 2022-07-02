@@ -342,3 +342,13 @@ Al hacer comentarios, más que pensar en otro programador, piensa en que esa exp
 ```
 La optimización prematura es la causa de todos los males. La micro optimización, más aún.
 ```
+
+#### 6. Depuración de código
+
+- La **depuración de código** se trata de buscar anomalías durante la ejecución de nuestro código. Un buen programador va a depurar utilizando un depurador y no utilizando `print`.
+
+- Los depuradores funcionan mediante **puntos de ruptura o break point**. Un **punto de ruptura** es una parte en la que decimos al programa que debe detenerse y en ese momento aparece el depurador.
+
+- Un **watcher o watch point** es un **break point** que se dispara solamente si se cumple una condición.
+
+- La **pila de llamadas** es también una herramienta del depurador y sirve para ver por donde ha pasado mi programa.
