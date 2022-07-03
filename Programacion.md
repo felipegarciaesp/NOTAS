@@ -352,3 +352,96 @@ La optimización prematura es la causa de todos los males. La micro optimizació
 - Un **watcher o watch point** es un **break point** que se dispara solamente si se cumple una condición.
 
 - La **pila de llamadas** es también una herramienta del depurador y sirve para ver por donde ha pasado mi programa.
+
+#### 7. Introducción a la Programación Orientada a Objetos
+
+- La programación orientada a bjetos nos permite tener un código limpio y segmentado. No siempre hay que usarlo, pero es una buena práctica en proyectos grandes.
+
+- **Objeto**: entidad que represente a algo del mundo real.
+
+- Los **objetos** tienen **propiedades**, como lo son el tamaño, color, material, etc. Los objetos también tienen métodos, si hablamos de un auto podemos hablar de abrir/cerrar la puerta, prender/apagar el motor, etc.
+
+- Los **objetos**, según el lenguaje de programación, se declaran mediante **clases** (Java, PHP, Python, etc) o **funciones entre estructuras** (Go).
+
+- Las **clases** tienen que tener una serie de propiedades. Estas propiedades puedes ser **variables** o **constantes**.
+
+- ¿Cómo puedo tener un **objeto** de una **clase**?: **Instanciándolo**.
+
+- **Instanciar** un **objeto** significa crear una zona en la memoria, a través de una **variable**, y que esa zona en la memoria (a la que voy a acceder por medio de esta variable) va a tener lo que tenga la **clase**.
+
+- La convención dice que para crear una instancia de una clase, y por lo tanto crear un objeto, se debe hacer lo siguiente:
+
+    - Primero, poner el nombre de la clase.
+    - Seguir con el nombre de la variable que quieres que tenga.
+    - Para instanciarlo se debe hacer igual a una nueva referencia en memoria.
+
+- Ejemplo de como crear una instancia de una clase (en Java):
+
+```
+Coche coche = new Coche()
+```
+
+- **Coche** es una clase definida (ya creada) que cuenta con algunas propiedades.
+- **coche** es el nombre de nuestra variable.
+- **Coche()** es la nueva referencia en memoria que hemos creado, sería la instancia.
+
+
+- Al crear el **objeto** ya puedo invocar sus funciones, como se muestra en el siguiente ejemplo:
+
+```
+coche.acelerar();
+coche.decelerar();
+```
+
+- Un ejemplo de **clase** sería el siguiente:
+
+```
+class Coche {
+    int numeroDePuertas;
+    int velocidadMaxima;
+    float velocidadActual;
+
+    public void acelerar() {
+        velocidadActual +=15;
+    }
+    public void decelerar() { }
+}
+```
+
+- Cuando hablamos de funciones dentro de una clase, las llamamos **métodos**.
+
+- **new Coche()** equivale a **instanciar** un objeto. Con **new** nos reserva memoria para un nuevo coche. Nosotros podríamos hacer lo siguiente:
+
+```
+Coche coche = new Coche();
+Coche coche2 = new Coche();
+Coche coche3 = new Coche();
+```
+
+- En el ejemplo anterior, cada uno de los coches (coche, coche2 y coche3) tienen variables numeroDdePuertas, velocidadMaxima y velocidadActual independientes entre sí. Esto es porque **new Coche()** asigna memoria en una zona independiente en donde estuvieran las otras variables. Comparten las mismas propiedades y los mismos métodos, pero no son los mismos.
+
+- Un **constructor** es una forma de inicializar las **propiedades** de una **clase** cuando la **instanciamos**.
+
+- Un **constructor** se ejecuta siempre que invoquemos la **clase** y sirve para inicializar las variables (como el número de puertas o la velocidad máxima).
+
+- Un **constructor** es lo primero que se ejecuta cuando se **instancia** una **clase**. El **constructor** es el mejor sitio que se tiene para **inicializar** las **propiedades** de una **clase**.
+
+- Cuando yo no creo un **constructor**, Java automáticamente lo crea por mí. Cuando yo creo un **constructor**, Java ya no va a crear ningún otro **constructor** por mí.
+
+- La gracia del constructor, aplicado a nuestro ejemplo del coche, es que no todos los coches son iguales: algunos pueden tener mas o menos puertas, así como también distintas velocidades máximas para el motor. De esta forma puedo crear el constructor de forma que pueda ingresar las propiedades de la clase. Por ejemplo:
+
+```
+public Coche(int puertas, int velocidad) {
+        numeroDePuertas = puertas;
+        velocidadMaxima = velocidad;
+        System.out.println("Estoy en el constructor");
+    }
+```
+
+- De esta forma, con una misma **clase** puedo crear muchos **objetos** con las mismas **propiedades** pero con valores distintos entre sí. Por ejemplo:
+
+```
+Coche coche = new Coche(2, 90);
+```
+
+
