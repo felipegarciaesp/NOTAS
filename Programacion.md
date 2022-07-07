@@ -443,5 +443,42 @@ public Coche(int puertas, int velocidad) {
 ```
 Coche coche = new Coche(2, 90);
 ```
+-En Java existe el concepto de **sobrecarga**. Esto consiste en tener dos funciones con el mismo tipado (*"public"*, por ejemplo), pero distintos parámetros. Un ejemplo de esto es crear dos funciones que se llaman igual y que tienen el mismo tipado, pero a una no le defino parámetros de entrada pero a la otra sí. Al llamar a la función, si no le agrego parámetros de entrada entonces será llamada la primera función. En caso contrario, es decir si le he asignado parámetros de entrada, se llama a la otra función.
+
+- No es extraño sobrecargar las funciones para que puedan ser invocadas de distintas formas.
+
+- Hay funciones que se sobrecargan en el tipo de dato. Ejemplo:
+
+```
+public int Suma(int a, int b) {return a + b};
+public float Suma(float a, float b) {return a + b};
+```
+- En el ejemplo anterior, ambas funciones se llaman **"Suma"**. Una devuelve un tipo **integer** y acepta valores **integer**, mientras que la otra devuelve valores **float** y acepta valores **float**. Este es otro ejemplo de sobrecarga típica.
+
+- Recordar que lo primero que se ejecuta cuando se **instancia** una **clase** es el **contructor**. El **constructor** es el mejor sitio que tenemos para inicializar las **propiedades** de una **clase**. En el **constructor** podremos sobrecargar las **propiedades** las veces que sean necesarias.
+
+- Como ya se dijo, Java permite realizar la **sobrecarga de funciones**. En concreto, lo que se ha hecho con el ejemplo de **"Coche"** (durante el video) es una **sobrecarga de constructor** o **constructor overloading**.
+
+- Buena práctica: cuando se tiene un constructor con parámetros y se quiere incializar variables internas, habitualmente se dará como nombre de los parámetros los mismos nombres de parámetros que tenga la clase. Para hacer esto correctamente, a la propiedad de la clase se debe anteponer **"this."**:
+
+```
+class Coche {
+
+    int numeroDePuertas;
+    int velocidadMaxima;
+    float velocidadActual;
+
+    public Coche(int numeroDePuertas, int velocidadMaxima) {
+        this.numeroDePuertas = numeroDePuertas;
+        this.velocidadMaxima = velocidadMaxima;
+        System.out.println("Estoy en el constructor CON parametros");
+    }
+
+}
+```
+- Lo que hace el **"this."** en las líneas anteriores es "al parametro numeroDePuertas de esta clase asígnale el valor de la variable de este parametro numeroDePuertas". Esto se hace cuando quiero inicializar una propiedad de la clase cuyo nombre es igual a un parámetro de la función. Para hacer referencia a la propiedad de la clase, debo anteponer el **"this."**, y con esto lo inicializaría.
+
+
+
 
 
