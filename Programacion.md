@@ -482,6 +482,8 @@ class Coche {
 
 - La **privacidad**, **abstracción** y **encapsulación** son conceptos muy ligados a la **programación orientada a objetos**.
 
+##### PRIVACIDAD:
+
 - Las **propiedades** de una **clase** pueden ser públicas, privadas o protegidas.
 
 - Una propiedad privada únicamente la podré utilizar en la implementación de la clase, dentro de la clase. Cuando es pública la podré utilizar tanto dentro de la clase como en el programa principal. Las definiciones de ambas dependen del lenguaje.
@@ -559,3 +561,33 @@ CLASE MICLASE
 ##### ABSTRACCIÓN:
 
 - La **Abstracción** consiste en que voy a implementar parte de mi **clase** y voy a dejar la otra parte de mi **clase** a su libre albedrío.
+
+- Una clase abstracta es igual que una clase común y corriente, pero suele tener un calificador. **En la clase abstracta te dan una serie de funciones ya programadas y te dicen que tienes que programar otra serie de funciones por ustedes mismos**.
+
+```
+CLASE ABSTRACTA VEHICULO
+
+    PRIVADA TIPO;
+    PRIVADA SONIDO;
+
+    // Esta es una funcion no abstracta:
+    FUNCION SETTERTIPO(TEXTO valor)
+        ESTA_CLASE.TIPO = valor
+    // La funcion SETTERTIPO va a ser comun para todos los vehiculos, tanto para moto como para auto.
+    
+
+    FUNCION GETTERTIPO(TEXTO valor)
+        DEVUELVE ESTA_CLASE.TIPO;
+
+
+    // Estas funciones abstractas son las que no están hechas.
+    FUNCION ABSTRACTA SETTERSONIDO(TEXTO sonido)
+        ESTA_CLASE.SONIDO = sonido
+  
+    // Esta es una funcion abstracta:
+    FUNCION ABSTRACTA GETTERSONIDO() TEXTO
+        DEVUELVE EL VALOR DE ESTA_CLASE.sonido
+    // El GETTERSONIDO no es común, el sonido de la moto es distinto a la del auto.
+``` 
+
+- Las **clases abstractas** no se pueden utilizar directamente, deben ser heredadas.
