@@ -478,7 +478,84 @@ class Coche {
 ```
 - Lo que hace el **"this."** en las líneas anteriores es "al parametro numeroDePuertas de esta clase asígnale el valor de la variable de este parametro numeroDePuertas". Esto se hace cuando quiero inicializar una propiedad de la clase cuyo nombre es igual a un parámetro de la función. Para hacer referencia a la propiedad de la clase, debo anteponer el **"this."**, y con esto lo inicializaría.
 
+#### 8. Privacidad, abstracción y encapsulación.
 
+- La **privacidad**, **abstracción** y **encapsulación** son conceptos muy ligados a la **programación orientada a objetos**.
 
+- Las **propiedades** de una **clase** pueden ser públicas, privadas o protegidas.
 
+- Una propiedad privada únicamente la podré utilizar en la implementación de la clase, dentro de la clase. Cuando es pública la podré utilizar tanto dentro de la clase como en el programa principal. Las definiciones de ambas dependen del lenguaje.
 
+- Un ejemplo en Java a continuación:
+
+```
+public class Main {
+
+    public static void main(String[] args) {
+        Vehiculo vehiculo = new Vehiculo();
+        vehiculo.tipo = "Coche";
+        System.out.println(vehiculo.tipo);
+    }
+}
+
+class Vehiculo{
+    String tipo;
+}
+``` 
+
+- Respecto al código anterior, ojo con `Vehiculo vehiculo = new Vehiculo();`. Esto es: la clase `Vehiculo` declara una variable de nombre `vehiculo` que a su vez es una instancia de `Vehiculo` (new Vehiculo()).
+
+- El código anterior muestra un ejemplo de una propiedad pública: puedo acceder (y en este caso definir) a la propiedad de un objeto desde el cuerpo principal del código. En pantalla se imprime 'Coche'. Cambia si el código fuese así:
+
+```
+public class Main {
+
+    public static void main(String[] args) {
+        Vehiculo vehiculo = new Vehiculo();
+        vehiculo.tipo = "Coche";
+        System.out.println(vehiculo.tipo);
+    }
+}
+
+class Vehiculo{
+    private String tipo;
+}
+``` 
+
+- La diferencia del anterior, este código no compilará porque ahora la propiedad "tipo" es privada.
+
+##### ENCAPSULACIÓN:
+
+- La **Encapsulación** consiste en jugar con los tipos públicos y privados de forma que desde la clase los manipule y desde fuera de la clase los pueda utilizar. Para realizar una **encapsulación** se hace lo siguiente (ojo a los comentarios):
+
+```
+CLASE MICLASE
+    //primero, las propiedades se declaran como privadas:
+
+    PRIVADA PROPIEDAD1;
+    PRIVADA PROPIEDAD2;
+
+    // luego, tenemos que definir dos tipos de funciones por cada una de las propiedades: GETTER y SETTER. Tienen como tarea modificar la propiedad o darnos el valor de la propiedad.
+
+    //este es un SETTER:
+    //es una funcion que acepta parametros para asignar valores, pero no devuelve un valor.
+    FUNCION SETTERPROPIEDAD1(TEXTO valor)
+        ESTA_CLASE.PROPIEDAD1 = valor
+
+    //este es un GETTER:
+    //esta funcion no acepta parametros pero devuelve algo, en este caso un texto.    
+    FUNCION GETTERPROPIEDAD1() TEXTO
+        DEVUELVE EL VALOR DE ESTA_CLASE.PROPIEDAD1
+``` 
+
+- Se llama **encapsulación** porque estamos encapsulando las propiedades para acceder a ellas únicamente mediante funciones.
+
+- No es necesario crear GETTERS y SETTERS para propiedades que están dentro de la clase.
+
+- La **encapsulación** consiste en que vamos a permitir que se modifiquen ciertas variables privadas de una clase mediante los métodos GET y SET.
+
+- **Encapsular** puede ser muy útil en la programación multi-hilo o si necesitamos que la clase tenga información de su estado.
+
+##### ABSTRACCIÓN:
+
+- La **Abstracción** consiste en que voy a implementar parte de mi **clase** y voy a dejar la otra parte de mi **clase** a su libre albedrío.
