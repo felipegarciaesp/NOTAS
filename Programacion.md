@@ -591,3 +591,96 @@ CLASE ABSTRACTA VEHICULO
 ``` 
 
 - Las **clases abstractas** no se pueden utilizar directamente, deben ser heredadas.
+
+-**OJO** En el momento en que convierto una clase a abstracta, ya no la puedo instanciar.
+
+- Una función abstracta **no tiene cuerpo**. Por eso sabemos que son abstractas, **no sabemos que van a hacer**. Por esta razón, si en el código principal se llama a una clase abstracta, en realidad el código no sabría que hacer porque no hay ninguna orden. **Acá entra el concepto de herencia**.
+
+#### 9. Herencia, Polimorfismo e Interfaces.
+
+##### Herencia.
+
+- La **herencia** consiste en que una **clase** hereda **métodos** y **propiedades** de otra **clase**. A la **clase** que hereda le llamamos **clase hija** y  la clase que cede sus funciones le podemos llamar de muchas formas: **super clase**, **clase base**, **clase principal**, ... realmente se le puede llamar de cualquier forma.
+
+- Cada **clase** derivada hereda tanto **funciones** como **métodos** de su padre y añade las suyas propias. Es importante este punto de añadir sus propias **funciones** y **métodos**, ya que si una nueva clase derivada de otra no va a aportar nada nuevo, entonces no tiene sentido crearla en absoluto.
+
+- A continuación, un ejemplo de **herencia**:
+
+```
+CLASE VEHICULO
+    PRIVADA VELOCIDADMAXIMA;
+    PRIVADA TIPOGASOLINA;
+
+    FUNCION diHola()
+        IMPRIME "Hola"
+
+CLASE COCHE HEREDA DE VEHICULO;
+    (heredada) VELOCIDADMAXIMA
+    (heredada) TIPOGASOLINA
+    NUMERO_DE_PUERTAS;
+
+    (heredada) FUNCION diHola()
+        IMPRIME "Hola"
+
+    FUNCION SETTERNUMERODEPUERTAS(INTEGER puertas)
+        ESTA_CLASE.NUMERO_DE_PUERTAS = puertas
+
+    FUNCION GETTERNUMERODEPUERTAS() INTEGER
+        DEVUELVE ESTA_CLASE.NUMERO_DE_PUERTAS
+
+CLASE COUPE HEREDA DE COCHE
+    (heredada) VELOCIDADMAXIMA
+    (heredada) TIPOGASOLINA
+    (heredada) NUMERO_DE_PUERTAS;
+
+    (heredada) FUNCION diHola()
+        IMPRIME "Hola"
+
+    (heredada) FUNCION SETTERNUMERODEPUERTAS(INTEGER puertas)
+        ESTA_CLASE.NUMERO_DE_PUERTAS = puertas
+
+    (heredada) FUNCION GETTERNUMERODEPUERTAS() INTEGER
+        DEVUELVE ESTA_CLASE.NUMERO_DE_PUERTAS
+```
+
+- Ojo, una clase puede dejar claro que **no quiere que hereden de ella**.
+
+- **¿Cuando se utiliza una clase padre y cuando una clase hija?** Utilizo una **clase padre** cuando tengo la certeza y absoluta seguridad de que no voy a necesitar ningún método adicional al que ya está en esta **clase**. Si necesito un **método** que está en la **clase hija** y no en la **clase padre**, entonces invoco la **clase hija**.
+
+- Como se vió en el capítulo anterior, **para entender la abstracción es importante entender primero el concepto de herencia**. Las clases abstractas tienen funciones abstractas, pero estas funciones no tienen cuerpo, es decir, no hay órdenes respecto a qué hacer. Acá entra el concepto de **herencia**: cuando una **clase** *hereda* las **funciones** de una **clase abstracta**, es en la **clase** que *hereda* donde se definen las órdenes de estas **funciones**.
+
+- Las **clases abstractas** sirven para implementar clases parcialmente. Aquí nuevamente el nexo con la **herencia**: la **clase padre** define como funciones abstractas aquellas funciones que **deben** existir, pero es tarea de las clases hijas definir lo que deben hacer (siempre y cuando lo hagan).
+
+- La abstracción se puede asemejar a que nos dicen que debemos hacer algo, pero no como hacerlo. Debemos cumplir un objetivo, pero depende de nosotros como lo hacemos. Los métodos abstractos nos dicen que tienes que hacer, pero no como tienes que hacerlo.
+
+- Como se ha notado, **para entender la abstracción es necesario entender la herencia**.
+
+- **Herencia Simple**: Una clase hereda de otra. Ejemplo: clase B hereda de clase A.
+
+- **Herencia Multinivel**: Lo mismo que la herencia simple, pero hay una cadena de herencias. Ejemplo: clase C hereda de clase B y a su vez clase B hereda de clase A.
+
+- **Herencia Múltiple**: Una clase hereda de dos o más clases. 
+
+- **Herencia Jerárquica**: De una clase base derivan otras clases y de estas clases derivan otras clases. Piensese como un árbol genealógico.
+
+- **Herencia Híbrida**: Combina modelos de herencia. Ejemplo: Clases B y C heredan de la clase A, Clase D hereda de las Clases B y C.
+
+##### Polimorfismo.
+
+- El **polimorfismo** consiste en que las clases hijas implementan la misma función pero hacen cosas distintas. Por ejemplo:
+
+```
+CLASE VEHICULO
+    PRIVADA VELOCIDADMAXIMA;
+
+    FUNCION diHola()
+        IMPRIME "Hola"
+
+CLASE COCHE HEREDA DE VEHICULO
+    (heredada) VELOCIDADMAXIMA
+
+    (heredada PERO LA SOBREESCRIBO) FUNCION diHola()
+        IMPRIME "Soy un robot y sé contar del 1 al 10"
+```
+
+- En el ejemplo anterior, no quiero que la funcion diHola() se comporte igual que la funcion diHola() del padre, si no que quiero que haga lo que yo quiero.
