@@ -1,4 +1,4 @@
-# Programación
+ # Programación
 En este archivo iré dejando notas respecto a la programación, por cursos que vaya tomando.
 
 ## Platzi
@@ -684,3 +684,44 @@ CLASE COCHE HEREDA DE VEHICULO
 ```
 
 - En el ejemplo anterior, no quiero que la funcion diHola() se comporte igual que la funcion diHola() del padre, si no que quiero que haga lo que yo quiero.
+
+- Los lenguajes de programación no solo tienen **polimorfismo** a nivel de **métodos de clase**, sino que algunos también lo tienen a nivel de función. Esto singifica que una misma función puede aparecer multiples veces en una misma clase aceptando cosas diferentes, haciendo cosas diferentes, devolviendo parámetros diferentes, etc. Ejemplo:
+
+```
+CLASE VEHICULO
+    PRIVADA VELOCIDADMAXIMA;
+
+    FUNCION diHola()
+        IMPRIME "Hola"
+
+CLASE COCHE HEREDA DE VEHICULO
+    (heredada) VELOCIDADMAXIMA
+
+    (heredada PERO LA SOBREESCRIBO) FUNCION diHola()
+        IMPRIME "Soy un robot y sé contar del 1 al 10"
+
+    FUNCION SumaNumeros(ENTERO a, ENTERO b) ENTERO
+        DEVUELVE A + B
+
+    FUNCION SumaNumeros(FLOTANTE a, FLOTANTE b) FLOTANTE
+        DEVUELVE A + B
+
+    FUNCION SumaNumeros(DOUBLE a, DOUBLE b)
+        IMPRIME A + B
+```
+
+##### Interfaces.
+
+- Las **interfaces** se parecen a las **clases abstractas**, pero a diferencia de éstas, no implementan ninguna función sino que nos dicen lo que tenemos que implementar. Ejemplo:
+
+```
+INTERFACE COCHE
+    FUNCION ACELERAR(NUMERO CUANTAVELOCIDAD)
+    FUNCION FRENAR(NUMERO CUANTAVELOCIDAD)
+```
+
+- Una **interfaz** es una forma de indicar a un programador que cuando implemente una **clase** debe implementar los **métodos** definidos en la **interfaz**. 
+
+- Las interfaces las utilizamos cuando queremos crear clases y que esas clases tengan una funciones previamente definidas. La **interfaz** nos indica que funciones tenemos que cumplir.
+
+- Las **interfaces** se usan para unificar **métodos**, los cuales los vamos a implementar en una o más **clases**, luego las vamos a invocar. La ventaja de la **interfaz** es que si yo sé que mi **clase** implementa una interfaz y sé que otra **clase** implementa la misma interfaz, entonces tengo la garantía de que ambas **clases** implementan las mismas **funciones**.
