@@ -725,3 +725,91 @@ INTERFACE COCHE
 - Las interfaces las utilizamos cuando queremos crear clases y que esas clases tengan una funciones previamente definidas. La **interfaz** nos indica que funciones tenemos que cumplir.
 
 - Las **interfaces** se usan para unificar **métodos**, los cuales los vamos a implementar en una o más **clases**, luego las vamos a invocar. La ventaja de la **interfaz** es que si yo sé que mi **clase** implementa una interfaz y sé que otra **clase** implementa la misma interfaz, entonces tengo la garantía de que ambas **clases** implementan las mismas **funciones**.
+
+- Las **interfaces** son una forma de indicar a los programadores que deben cumplir con algo. Luego, siempre hay que crear una **clase** que implemente la **interfaz**.
+
+#### 10. Métodos de clase.
+
+- Un **método** de **clase** es una **función**. Estos métodos tendrán (según el lenguaje) algo que se llama signature o prototipo, que es la forma en la que la declaramos. Esto declara el ámbito del método (publico o privada, recordar que un metodo privado solo se puede utilizar dentro de la propia clase). Un método se construe así:
+
+```
+[VISIBILIDAD] [NOMBRE_METODO] ([PARAMETROS]) [VALOR]
+PUBLICA leerLibros(TEXTO libro) TEXTO contenido
+```
+
+- Para invocar a un método:
+
+```
+OBJETO.MÉTODO(PARÁMETROS)
+```
+
+- Se dice que una **clase** satisface una **interfaz** cuando esa **clase** implementa todos los **métodos** de esa **interfaz**.
+
+- Un ejemplo aplicado a interfaces:
+
+```
+INTERFAZ USUARIOS
+    METODO GETUSUARIO()
+
+CLASE USUARIOSTXT IMPLEMENTA LA INTERFAZ USUARIOS
+    METODO GETUSUARIOS()
+        LEER UN FICHERO.TXT
+        DEVOLVER TODAS LAS LINEAS
+
+CLASE USUARIOSBBDD IMPLEMENTA LA INTERFAZ USUARIOS
+    METODO GETUSUARIOS()
+        CONECTARME A MYSQL
+        EJECUTAR "SELECT * FROM..."
+        DEVOLVER TODOS LOS RESULTADOS
+
+FUNCION LISTARUSUARIOS(NECESITO INTERFAZ USUARIOS)
+    DE LA INTERFAZ USUARIOS EJECUTA EL METODO GETUSUARIOS
+
+INVOCO A LISTARUSUARIOS(TE DOY OBJETO USUARIOSTXT)
+INVOCO A LISTARUSUARIOS(TE DOY OBJETO USUARIOSBBDD)
+```
+
+- En el ejemplo anterior, las clases USUARIOSTXT y USUARIOSBBDD llegan a lo mismo, pero de distintas formas. La gracia es que la funcion LISTARUSUARIOS() no necesita ser modificada. Como se nota, lo único que cambia es la implementación del método en cada clase. Esto es muy útil en programación.
+
+- La interfaz sirve para abstraer el acceso a ciertas funciones por debajo, de forma que se simplifique.
+
+- Los **parámetros** que le pasamos a una **función** pueden ser de dos tipos: **paso por valor** o **paso por referencia**.
+
+- **Paso por valor**: cuando una función requiere de parámetros, estos son copiados y son tratados únicamente dentro de la función. Se copian los valores y los originales no se cambian. No hacen referencia a la misma zona de memoria, son copias en una zona de memoria distinta. Copiamos los valores de las variables en una zona de la memoria y se los pasamos a la función. Ejemplo en JAVA:
+
+```
+public static void main(String[] args) {
+    int valA = 5; // int = 32 bits = 4 bytes.
+    int valB = 10; // int = 32 bits = 4 bytes. 8 bytes en total hasta acá.
+
+    suma(valA, valB); // se copia en una zona de la memoria, llevamos 16 bytes en total hasta acá.
+
+    System.out.println(valA);
+    System.out.println(valB);
+}
+
+public static int suma(int a, int b) {
+    return a + b;
+}
+
+```
+
+- En el ejemplo anterior, las variables valA y valB son copiados en la función ahora bajo las variables a y b. Dentro de la función reciben el tratamiento necesario sin interferir con las variables originales.
+
+- Una desventaje del paso por valor es que puede llegar a ocupar mucho espacio en memoria, como se nota en los comentarios.
+
+- **Paso por referencia**: no funciona copiando los valores de las variables, sino que con la dirección de memoria de las variables. Manipula directamente las variables en el espacio de la memoria. Modificaría directamente las variables originales alterando su valor. Ejemplo en JAVA:
+
+```
+public static void main(String[] args) {
+    Coche coche = new Coche(); // sea Coche una clase con el método "velocidad".
+    cocheChanger(coche);
+    
+}
+
+public static void cocheChanger(Coche coche) {
+    coche.velocidad += 50;
+}
+```
+
+- En el ejemplo anterior, la velocidad del objeto coche sí se va a alterar, porque lo estamos manipulando. Esto del paso por referencia se ve mejor con los punteros, pero JAVA o tiene este concepto. En JAVA al momento en que un método recibe como parámetro un objeto, se trata de un paso por referencia.
