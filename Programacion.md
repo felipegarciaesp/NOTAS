@@ -865,3 +865,10 @@ public static void suma(int a, int b) {
 }
 ```
 
+#### 11. Lenguajes compilados e interpretados.
+
+- Un compilador toma una secuencia de caracteres y lo convierte en otra cosa. Es análogo a un traductor, ya que este compila una entrada (lenguaje en un idioma) y la convierte en otra cosa (lenguaje en otro idioma).
+
+- Un lenguaje compilado se compila en código máquina, el interpretado no.
+
+- 
