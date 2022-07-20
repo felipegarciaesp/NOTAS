@@ -813,3 +813,55 @@ public static void cocheChanger(Coche coche) {
 ```
 
 - En el ejemplo anterior, la velocidad del objeto coche sí se va a alterar, porque lo estamos manipulando. Esto del paso por referencia se ve mejor con los punteros, pero JAVA o tiene este concepto. En JAVA al momento en que un método recibe como parámetro un objeto, se trata de un paso por referencia.
+
+##### Recursividad.
+
+- La **recursividad** consiste en que un **método** se va a llamar a sí mismo una y otra vez. Ejemplo:
+
+```
+FUNCION SUMA(INT A, INT B) {
+    VAR TEMP = A + B
+    SUMA(A, TEMP)
+}
+```
+
+- El problema de la recursividad es que puede ventar el programa. Hay que saber cuando detenerla. Ejemplo:
+
+```
+FUNCION SUMA(INT A, INT B) {
+    VAR TEMP = A + B
+
+    SI TEMP NO ES MAYOR A 15
+    SUMA(A, TEMP)
+}
+```
+
+- El típico ejemplo de funcion recursiva es el factorial de un número. La recursividad consiste en que una función se invoque a sí misma. Ejemplo en JAVA (y que funciona!!!):
+
+```
+public static int factorial(int numero) {
+    int resultado;
+    if (numero == 1) {
+        return 1;
+    }
+
+    resultado = factorial(numero - 1) * numero;
+    return resultado;
+}
+```
+
+- Otro ejemplo de función recursiva es el siguiente:
+
+```
+public static void suma(int a, int b) {
+    var temp = a + b;
+    System.out.println("A vale " + a + " b vale " + b + " temp vale " + temp);
+
+    if (b >= 90) {
+        return;
+    }
+
+    suma(a,temp);
+}
+```
+
