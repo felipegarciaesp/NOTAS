@@ -1,4 +1,4 @@
- # Programación
+  # Programación
 En este archivo iré dejando notas respecto a la programación, por cursos que vaya tomando.
 
 ## Platzi
@@ -871,4 +871,19 @@ public static void suma(int a, int b) {
 
 - Un lenguaje compilado se compila en código máquina, el interpretado no.
 
-- 
+- El **análisis sintáctico** es lo que nos da el aviso de que estamos analizando algo que no debemos. Es el que arroja los famosos "syntax error". Este análiza el código y ve si tiene sentido.
+
+**¿Cuál es la diferencia entre un código interpretado y uno compilado?** 
+
+- El **lenguaje compilado** se ejecuta directamente en la memoria del sistema operativo, el **lenguaje interpretado** no. El **lenguaje interpretado** lee el código que ha generado el compilador y lo ejecuta paso a paso, tal y como una receta.
+
+- Un **lenguaje compilado** se ejecuta directamente en el procesador, mediante ejecución del sistema operativo. Ejemplo: C, C++, Rust, Go.
+
+- Un **lenguaje interpretado** no son ejecutados por nuestro sistema operativo ni en nuestra CPU, se ejecuta mediante una máquina virtual (o también llamado intérprete, que es otro programa). Java es un lenguaje interpretado, no es un lenguaje nativo (compilado). Java se ejecuta por debajo con "JVM" (Java Virtual Machine). Ejemplos de lenguajes interpretados: JAVA, Python, PHP, Ruby.
+
+- Hay **lenguajes compilados e interpretados** a la vez. Ejemplo: C#.
+
+- Los **lenguajes compilados** son muchísimo más rápidos que los **lenguajes interpretados**. La ventaja de los interpretados es que son mucho más fáciles de depurar, puede ser doloroso compilar un lenguaje compilado en especial si no hay acceso al código fuente. Otra ventaja del interpretado es que una vez escribo el código en un intérprete, lo puedo ejecutar en cualquier parte, pero el compilado no ya que debiese generar un código para cada procesador en el que se va a ejecutar. 
+
+
+
