@@ -885,5 +885,17 @@ public static void suma(int a, int b) {
 
 - Los **lenguajes compilados** son muchísimo más rápidos que los **lenguajes interpretados**. La ventaja de los interpretados es que son mucho más fáciles de depurar, puede ser doloroso compilar un lenguaje compilado en especial si no hay acceso al código fuente. Otra ventaja del interpretado es que una vez escribo el código en un intérprete, lo puedo ejecutar en cualquier parte, pero el compilado no ya que debiese generar un código para cada procesador en el que se va a ejecutar. 
 
+#### 12. Ronda de preguntas.
+
+- Un **framework** es un conjunto de librerías y/o herramientas para desarrollar. Es un conjunto de clases y herramientas que simplifican el desarrollo, para que no las tenga que hacer yo mismo. Laravel, por ejemplo, es un framework para PHP. Spring, Hibernet, Lucene son frameworks para Java.
+
+- Es un error decir que programas en Ruby on Rails, programas en Rruby utilizando el framework Ruby on Rails. Es un error decir que programas en Angular o React, programas en Javascript utilizando los framework Angular o React.
+
+- Es importante que primero aprendamos el lenguaje y despues aprendamos el framework.
+
+- Los frameworks son una colección de librerías que se crean para un lenguaje determinado. Cada framewrok esta unido a un lenguaje en concreto.
+
+- El front-end y el back-end se comunican mediante un protocolo, usualmente el protocolo HTTP. Se envía una petición desde el navegador hacia el servidor y esta petición se serializa en formato JSON. El back-end obtiene esta petición en JSON, procesa los datos, obtiene la información necesaria, la vuelve a codificar en JSON y nos la envia a nuestro navegador Web.
+
 
 
